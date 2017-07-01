@@ -15,7 +15,7 @@ def complete(offset, file, project_directory, text):
     source_files = _source_files(file, project_directory)
 
     cmd = [
-        "sourcekitten",
+        "/usr/local/bin/sourcekitten",
         "complete",
         "--text", text,
         "--offset", str(calculated_offset),
@@ -58,7 +58,7 @@ def cursor_info(offset, file, project_directory, text):
         yaml.generate_line("key.compilerargs", compilerargs, True) \
 
     cmd = [
-        "sourcekitten",
+        "/usr/local/bin/sourcekitten",
         "request",
         "--yaml",
         yaml_contents
